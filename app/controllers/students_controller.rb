@@ -50,4 +50,5 @@ class StudentsController < ApplicationController
     
     @students = Student.all
     render :index
+  end
 end
