@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 Skill.create(skill_name: "Ruby on Rails", student_id: 1)
 
 Experience.create(
@@ -28,3 +20,6 @@ Student.create(
   github_url: "asldkjfalsdf",
   photo_url: "adljfhalsdfjsd"
 )
+
+Education.create(start_date: "2014-12-20", end_date: "2015-12-20", degree: "MBA", school: "Drop Zone Portable Toilets university", details: "This school taught me of all of my organizational skills and attention to detila.", student_id: 1)
+Capstone.create(name: "Mind Control App", description: "This app is the best I can come up with.", url: "https://github.com/idriyslowe/resume-data-api/tree/feature-ninaleung", screenshot_url: "https://upload.wikimedia.org/wikipedia/commons/2/24/Male_mallard_duck_2.jpg", student_id: 1)
