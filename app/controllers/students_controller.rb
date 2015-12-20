@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   def index
-    @students = Student.all    
+    @students = Student.all 
   end
 
   def show
@@ -50,4 +50,5 @@ class StudentsController < ApplicationController
     
     @students = Student.all
     render :index
+  end
 end
