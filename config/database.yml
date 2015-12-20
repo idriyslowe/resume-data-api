@@ -47,8 +47,9 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
 production:
-  <<: *default
-  database: resume-data-api_production
-  username: resume-data-api
-  password: <%= ENV['RESUME-DATA-API_DATABASE_PASSWORD'] %>
+  database: resume-data-api-production
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
