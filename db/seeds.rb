@@ -1,4 +1,3 @@
-
 Skill.create(skill_name: "Ruby on Rails", student_id: 1)
 
 Experience.create(
