@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151220201054) do
+ActiveRecord::Schema.define(version: 20151220201921) do
+
+  create_table "capstones", force: :cascade do |t|
+    t.string   "name",           limit: 255
+    t.text     "description",    limit: 65535
+    t.string   "url",            limit: 255
+    t.string   "screenshot_url", limit: 255
+    t.integer  "student_id",     limit: 4
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
 
   create_table "experiences", force: :cascade do |t|
     t.date     "start_date"
