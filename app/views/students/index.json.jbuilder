@@ -13,15 +13,7 @@ json.array! @students.each do |student|
   json.photo_url student.photo_url
   json.user_id student.user_id
 
-  json.educations do
-    student.educations.each do |education|
-      json.start_date education.start_date
-      json.end_date education.end_date
-      json.degree education.degree
-      json.school education.school
-      json.details education.details
-    end
-  end
+  json.educations student.educations
 
   json.experiences do
     student.experiences.each do |experience|
