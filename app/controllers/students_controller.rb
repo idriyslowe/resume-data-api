@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+
   def index
     if params[:email] && params[:password]
       user = Student.find_by(email: params[:email])
@@ -75,8 +76,10 @@ end
 def destroy
   @student = Student.find_by(email: params[:email])
   @student.destroy
-  
+
   @students = Student.all
   render :index
 end
+
+
 end
