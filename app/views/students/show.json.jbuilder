@@ -13,11 +13,11 @@ json.photo_url @students.photo_url
 json.user_id @students.user_id
 
 json.educations do
-    student.educations.each do |education|
+    @students.educations.each do |education|
       json.start_date education.start_date
       json.end_date education.end_date
       json.degree education.degree
       json.school education.school
       json.details education.details
     end
-end
+  end
