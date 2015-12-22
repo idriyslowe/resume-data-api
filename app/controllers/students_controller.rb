@@ -4,7 +4,13 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find_by(id: params[:id])
+    if params[:email] and params[:password] == Student.find_by(email: params[:email]).password
+      @student = Student.find_by(email: params[:email])
+    elsif params[:id]
+      @student = Student.find_by(id: params[:id])
+    else
+      @student = {}
+    end
   end
 
   def create
@@ -21,12 +27,13 @@ class StudentsController < ApplicationController
       github_url: params[:github_url],
       photo_url: params[:photo_url],
       user_id: params[:user_id],
+      password: params[:password]
       )
     render :show
   end
 
   def update
-    @student = Student.find_by(id: params[:id])
+    @student = Student.find_by(email: params[:email])
     @student.update(
       first_name: params[:first_name],
       last_name: params[:last_name],
@@ -40,12 +47,13 @@ class StudentsController < ApplicationController
       github_url: params[:github_url],
       photo_url: params[:photo_url],
       user_id: params[:user_id],
+      password: params[:password]
       )
     render :show
   end
 
   def destroy
-    @student = Student.find_by(id: params[:id])
+    @student = Student.find_by(email: params[:email])
     @student.destroy
     
     @students = Student.all
