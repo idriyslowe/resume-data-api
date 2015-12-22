@@ -1,19 +1,19 @@
-json.id @students.id
-json.first_name @students.first_name
-json.last_name @students.last_name
-json.email @students.email
-json.phone @students.phone
-json.short_bio @students.short_bio
-json.linkedin_url @students.linkedin_url
-json.twitter @students.twitter
-json.blog_url @students.blog_url
-json.resume_url @students.resume_url
-json.github_url @students.github_url
-json.photo_url @students.photo_url
-json.user_id @students.user_id
+json.id @student.id
+json.first_name @student.first_name
+json.last_name @student.last_name
+json.email @student.email
+json.phone @student.phone
+json.short_bio @student.short_bio
+json.linkedin_url @student.linkedin_url
+json.twitter @student.twitter
+json.blog_url @student.blog_url
+json.resume_url @student.resume_url
+json.github_url @student.github_url
+json.photo_url @student.photo_url
+json.user_id @student.user_id
 
 json.educations do
-    @students.educations.each do |education|
+    @student.educations.each do |education|
       json.start_date education.start_date
       json.end_date education.end_date
       json.degree education.degree
@@ -23,7 +23,7 @@ json.educations do
   end
 
   json.experiences do
-    @students.experiences.each do |experience|
+    @student.experiences.each do |experience|
       json.start_date experience.start_date
       json.end_date experience.end_date
       json.job_title experience.job_title
@@ -32,7 +32,7 @@ json.educations do
   end
 
   json.capstones do
-    @students.capstones.each do |capstone|
+    @student.capstones.each do |capstone|
       json.name capstone.name
       json.description capstone.description
       json.url capstone.url
@@ -41,7 +41,7 @@ json.educations do
   end
   
   json.skills do
-    @students.skills.each do |skill|
+    @student.skills.each do |skill|
       json.skill_name skill.skill_name
     end
   end
