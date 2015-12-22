@@ -1,5 +1,5 @@
 json.array! @students.each do |student|
-
+  
   json.id student.id
   json.first_name student.first_name
   json.last_name student.last_name
@@ -46,6 +46,4 @@ json.array! @students.each do |student|
       json.skill_name skill.skill_name
     end
   end
-
-
 end
