@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get '/' => 'students#index'
   get '/students' => 'students#index'
+  get '/studentssignin' => 'students#show'
   get '/students/:id' => 'students#show'
   post '/students' => 'students#create'
   patch '/students/:id' => 'students#update'
