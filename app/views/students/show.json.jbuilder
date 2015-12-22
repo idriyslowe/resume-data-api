@@ -21,3 +21,27 @@ json.educations do
       json.details education.details
     end
   end
+
+  json.experiences do
+    @students.experiences.each do |experience|
+      json.start_date experience.start_date
+      json.end_date experience.end_date
+      json.job_title experience.job_title
+      json.company experience.company
+    end
+  end
+
+  json.capstones do
+    @students.capstones.each do |capstone|
+      json.name capstone.name
+      json.description capstone.description
+      json.url capstone.url
+      json.screenshot_url capstone.screenshot_url
+    end
+  end
+  
+  json.skills do
+    @students.skills.each do |skill|
+      json.skill_name skill.skill_name
+    end
+  end
