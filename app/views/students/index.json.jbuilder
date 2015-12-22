@@ -32,12 +32,6 @@ json.array! @students.each do |student|
     end
   end
 
-  json.skills do
-    student.skills.each do |skill|
-      json.skill_name skill.skill_name
-    end
-  end
-
   json.capstones do
     student.capstones.each do |capstone|
       json.name capstone.name
@@ -46,5 +40,12 @@ json.array! @students.each do |student|
       json.screenshot_url capstone.screenshot_url
     end
   end
+  
+  json.skills do
+    student.skills.each do |skill|
+      json.skill_name skill.skill_name
+    end
+  end
+
 
 end
