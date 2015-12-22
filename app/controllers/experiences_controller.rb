@@ -14,7 +14,7 @@ class ExperiencesController < ApplicationController
       end_date: params[:end_date],
       job_title: params[:job_title],
       company: params[:company],
-      student_id: params[:student_id],
+      student_id: params[:student_id]
     )
   end
 
